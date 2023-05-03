@@ -1,0 +1,17 @@
+{
+  "memory": 256,
+  "ttl": 10,
+  "timeout": 2,
+  "minReplicas": 2,
+  "maxReplicas": 4,
+  "workers": 1,
+  "events": {
+    "orderEvent": {
+      "sender": "vtex.orders-broadcast",
+      "topics": ["order-status-updated"]
+    },
+    "skuChange": {
+      "keys": ["broadcaster.notification"]
+    }
+  }
+}
